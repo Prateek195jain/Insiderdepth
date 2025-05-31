@@ -31,17 +31,21 @@ export const useQuizLogic = () => {
     }
   }, [questionId, answers]);
 
-  const handleOptionSelect = (idx: number) => {
-    if (!isAnswered) {
-      setTempSelectedOption(idx);
-    }
-  };
-
   const handleCheckAnswer = () => {
     if (tempSelectedOption !== null && !isAnswered) {
       setSelectedOption(tempSelectedOption);
       setIsAnswered(true);
       setAnswer(questionId, tempSelectedOption);
+    }
+  };
+
+  const handleOptionSelect = (idx: number) => {
+    if (!isAnswered) {
+      if (tempSelectedOption === idx) {
+        setTempSelectedOption(null);
+      } else {
+        setTempSelectedOption(idx);
+      }
     }
   };
 

@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { QuizModalProps } from "@/app/features/education/components/QuizModal/type";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function QuizModal({
   imageSrc,
@@ -35,7 +36,13 @@ export default function QuizModal({
         <AlertDialogOverlay className="backdrop-blur-sm bg-black/30 fixed inset-0 z-40" />
         <AlertDialogContent className="bg-[#161B22] border-[#262B32] rounded gap-y-10 py-10 z-50">
           <AlertDialogHeader className="gap-y-5">
-            <img src={imageSrc} alt="" className="h-10 w-10 mx-auto" />
+            <Image
+              src={imageSrc}
+              alt=""
+              height={40}
+              width={40}
+              className="mx-auto"
+            />
             <AlertDialogTitle className="text-center text-white text-2xl">
               {title}
             </AlertDialogTitle>

@@ -8,8 +8,8 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import NavLinks from "./NavLinks";
-import SearchBar from "./SearchBar";
 import AuthButtons from "./AuthButtons";
+import SearchBar from "./Searchbar";
 
 const MobileNavbar = () => {
   return (

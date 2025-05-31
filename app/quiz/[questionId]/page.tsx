@@ -35,6 +35,13 @@ export default function QuizPage() {
           <Buttons
             onClick={handleCheckAnswer}
             disabled={tempSelectedOption === null}
+            className={`px-4 py-2 rounded-md transition font-semibold 
+    ${
+      tempSelectedOption === null
+        ? "bg-gray-500 text-gray-300 cursor-not-allowed"
+        : "bg-[#287EE9] text-white hover:bg-[#4E4E4F3B]"
+    }
+  `}
           >
             Check Answer
           </Buttons>
