@@ -1,8 +1,8 @@
 "use client";
 
+import Buttons from "@/app/features/education/components/button";
 import { QuestionCard } from "@/components/quiz/components/QuestionCard";
 import { useQuizLogic } from "@/components/quiz/hooks/useQuizLogic";
-import { Button } from "@/components/ui/button";
 
 export default function QuizPage() {
   const {
@@ -19,7 +19,8 @@ export default function QuizPage() {
   if (!question) return <div className="text-white">Question not found</div>;
 
   return (
-    <div className="p-6 space-y-4 h-screen flex flex-col items-center justify-center">
+    <div className="p-6 space-y-10 h-screen flex flex-col items-center justify-center">
+      <h1 className="text-white font-bold text-2xl">Quiz - Knowledge Test</h1>
       <QuestionCard
         question={question.question}
         options={question.options}
@@ -31,21 +32,21 @@ export default function QuizPage() {
       />
       <div className="flex justify-start lg:w-1/2 gap-4">
         {!isAnswered ? (
-          <Button
-            variant="secondary"
+          <Buttons
             onClick={handleCheckAnswer}
             disabled={tempSelectedOption === null}
           >
             Check Answer
-          </Button>
+          </Buttons>
         ) : (
-          <Button variant="secondary" onClick={handleNext}>
-            Next
-          </Button>
+          <Buttons onClick={handleNext}>Next</Buttons>
         )}
-        <Button variant="default" onClick={handleBack}>
+        <Buttons
+          onClick={handleBack}
+          className="bg-[#4E4E4F3B] hover:bg-[#287EE9]"
+        >
           Back
-        </Button>
+        </Buttons>
       </div>
     </div>
   );

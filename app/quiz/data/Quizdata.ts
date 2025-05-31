@@ -64,40 +64,4 @@ export const Questions: QuestionType[] = [
     ],
     correctOption: 2,
   },
-  {
-    id: 6,
-    question:
-      "In the context of algorithmic trading, what does the volume profile primarily show?",
-    options: [
-      "The average price over a specific period",
-      "The concentration of trading volume at specific price levels",
-      "The total number of trades executed in a session",
-      "The speed of price changes during a trading session",
-    ],
-    correctOption: 2,
-  },
-  {
-    id: 7,
-    question:
-      "In the context of algorithmic trading, what does the volume profile primarily show?",
-    options: [
-      "The average price over a specific period",
-      "The concentration of trading volume at specific price levels",
-      "The total number of trades executed in a session",
-      "The speed of price changes during a trading session",
-    ],
-    correctOption: 2,
-  },
-  {
-    id: 8,
-    question:
-      "In the context of algorithmic trading, what does the volume profile primarily show?",
-    options: [
-      "The average price over a specific period",
-      "The concentration of trading volume at specific price levels",
-      "The total number of trades executed in a session",
-      "The speed of price changes during a trading session",
-    ],
-    correctOption: 2,
-  },
 ];

@@ -1,6 +1,7 @@
+"use client";
+
 import { useState } from "react";
 import { eduContentArray } from "@/app/features/education/data";
-
 
 export function useEducationSteps() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -24,6 +25,6 @@ export function useEducationSteps() {
     prevStep,
     totalStep,
     isFirstStep: currentStep === 0,
-    isLastStep: currentStep === eduContentArray.length - 1
+    isLastStep: currentStep === eduContentArray.length - 1,
   };
 }
