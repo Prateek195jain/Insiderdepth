@@ -6,8 +6,14 @@ import EducationTab from "@/app/features/education/educationtab";
 import QuizModal from "../features/education/components/QuizModal/quizmodal";
 
 export default function Education() {
-  const { currentContent, nextStep, prevStep, isFirstStep, isLastStep } =
-    useEducationSteps();
+  const {
+    currentContent,
+    nextStep,
+    prevStep,
+    isFirstStep,
+    isLastStep,
+    handleNext,
+  } = useEducationSteps();
 
   return (
     <div className="flex flex-col gap-5 lg:gap-10 p-10 lg:px-60 bg-[#010409] text-white pt-10 min-h-screen min-w-screen">
@@ -28,7 +34,7 @@ export default function Education() {
             imageSrc="/knowledge.png"
             title="Test Your Knowledge!"
             description="There are 5 questions ahead of you. Don't worry about getting them right; you're not being assessed."
-            onNext={() => console.log("Next clicked")}
+            onNext={handleNext}
             onSkip={() => console.log("Skipped")}
             triggerText="Start Quiz"
           />

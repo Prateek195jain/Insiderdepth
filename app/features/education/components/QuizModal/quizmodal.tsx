@@ -13,7 +13,6 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { QuizModalProps } from "@/app/features/education/components/QuizModal/type";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function QuizModal({
@@ -55,7 +54,7 @@ export default function QuizModal({
               className="bg-[#287EE9] rounded md:px-20 md:py-6 md:text-lg font-normal"
               onClick={onNext}
             >
-              <Link href="/quiz/1">Next</Link>
+              next
             </AlertDialogAction>
             <AlertDialogCancel
               className="bg-[#4E4E4F3B] rounded border-[#4E4E4F3B] text-[#FFFFFF8F] md:px-20 md:py-6 md:text-lg font-normal"

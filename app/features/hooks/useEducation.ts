@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { eduContentArray } from "@/app/features/education/data";
+import { useRouter } from "next/navigation";
 
 export function useEducationSteps() {
   const [currentStep, setCurrentStep] = useState(0);
+  const router = useRouter();
 
   const nextStep = () => {
     if (currentStep < eduContentArray.length - 1) {
@@ -17,13 +19,18 @@ export function useEducationSteps() {
       setCurrentStep(currentStep - 1);
     }
   };
-  const totalStep = eduContentArray.length;
+
+  const handleNext = () => {
+    router.push("/quiz/1");
+  };
+
   return {
     currentStep,
     currentContent: eduContentArray[currentStep],
     nextStep,
     prevStep,
-    totalStep,
+    handleNext,
+    totalStep: eduContentArray.length,
     isFirstStep: currentStep === 0,
     isLastStep: currentStep === eduContentArray.length - 1,
   };
