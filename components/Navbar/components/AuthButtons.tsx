@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Bell } from "lucide-react";
+import Notification from "./Notification";
 
 const AuthButtons = ({ isColumn = false }: { isColumn?: boolean }) => (
   <div
@@ -7,7 +7,7 @@ const AuthButtons = ({ isColumn = false }: { isColumn?: boolean }) => (
       isColumn ? "flex-col gap-4 items-center" : "gap-4 items-center"
     }`}
   >
-    <Bell className="text-white/70 w-5 h-5" />
+    <Notification />
     <Button
       variant="outline"
       className={`text-black/70 bg-white hover:bg-gray-200 ${
