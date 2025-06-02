@@ -61,7 +61,7 @@ export default function QuizPage() {
             title="Test was not passed"
             description={`You answered ${getCorrectAnswerCount()}/${totalQuestions} correctly. The test was not passed. Please go back to the beginning of the lesson and try again.`}
             onNext={() => handleNextPath("quiz/1")}
-            onSkip={() => console.log("Skipped")}
+            onSkip={() => handleNextPath("NewLesson")}
             triggerText="Start Quiz"
             showTrigger={false}
             open={openModal}
