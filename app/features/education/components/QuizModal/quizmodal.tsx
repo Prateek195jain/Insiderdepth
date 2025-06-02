@@ -22,14 +22,21 @@ export default function QuizModal({
   onNext,
   onSkip,
   triggerText = "Take Quiz",
+  showTrigger = true,
+  open,
+  onOpenChange,
+  buttonName1,
+  buttonName2,
 }: QuizModalProps) {
   return (
-    <AlertDialog>
-      <AlertDialogTrigger asChild>
-        <Button className="bg-[#287EE9] md:px-20 md:py-6 md:text-lg font-normal">
-          {triggerText}
-        </Button>
-      </AlertDialogTrigger>
+    <AlertDialog open={open} onOpenChange={onOpenChange}>
+      {showTrigger && (
+        <AlertDialogTrigger asChild>
+          <Button className="bg-[#287EE9] md:px-20 md:py-6 md:text-lg font-normal">
+            {triggerText}
+          </Button>
+        </AlertDialogTrigger>
+      )}
 
       <AlertDialogPortal>
         <AlertDialogOverlay className="backdrop-blur-sm bg-black/30 fixed inset-0 z-40" />
@@ -54,13 +61,13 @@ export default function QuizModal({
               className="bg-[#287EE9] rounded md:px-20 md:py-6 md:text-lg font-normal"
               onClick={onNext}
             >
-              next
+              {buttonName1}
             </AlertDialogAction>
             <AlertDialogCancel
               className="bg-[#4E4E4F3B] rounded border-[#4E4E4F3B] text-[#FFFFFF8F] md:px-20 md:py-6 md:text-lg font-normal"
               onClick={onSkip}
             >
-              Skip
+              {buttonName2}
             </AlertDialogCancel>
           </AlertDialogFooter>
         </AlertDialogContent>

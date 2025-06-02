@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useQuizStore } from "@/app/quiz/state/store";
@@ -17,6 +19,9 @@ export const useQuizLogic = () => {
   );
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
+  const [openModal, setOpenModal] = useState<boolean>(false);
+
+  const totalQuestions = Questions.length;
 
   useEffect(() => {
     const savedOption = answers[questionId];
@@ -39,6 +44,17 @@ export const useQuizLogic = () => {
     }
   };
 
+  const getCorrectAnswerCount = () => {
+    let correct = 0;
+    for (const q of Questions) {
+      const userAnswer = answers[q.id];
+      if (userAnswer !== undefined && userAnswer === q.correctOption) {
+        correct += 1;
+      }
+    }
+    return correct;
+  };
+
   const handleOptionSelect = (idx: number) => {
     if (!isAnswered) {
       if (tempSelectedOption === idx) {
@@ -53,7 +69,9 @@ export const useQuizLogic = () => {
     const nextId = questionId + 1;
     const hasNext = Questions.some((q) => q.id === nextId);
     if (hasNext) router.push(`/quiz/${nextId}`);
-    else router.push("/quiz/result");
+    else {
+      setOpenModal(true);
+    }
   };
 
   const handleBack = () => {
@@ -61,6 +79,7 @@ export const useQuizLogic = () => {
     const hasPrev = Questions.some((q) => q.id === prevId);
     if (hasPrev) router.push(`/quiz/${prevId}`);
   };
+
 
   return {
     question,
@@ -71,5 +90,9 @@ export const useQuizLogic = () => {
     handleCheckAnswer,
     handleNext,
     handleBack,
+    openModal,
+    setOpenModal,
+    getCorrectAnswerCount,
+    totalQuestions,
   };
 };

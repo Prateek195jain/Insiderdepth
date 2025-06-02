@@ -1,6 +1,8 @@
 "use client";
 
 import Buttons from "@/app/features/education/components/button";
+import QuizModal from "@/app/features/education/components/QuizModal/quizmodal";
+import { useEducationSteps } from "@/app/features/hooks/useEducation";
 import { QuestionCard } from "@/components/quiz/components/QuestionCard";
 import { useQuizLogic } from "@/components/quiz/hooks/useQuizLogic";
 
@@ -14,8 +16,13 @@ export default function QuizPage() {
     handleCheckAnswer,
     handleNext,
     handleBack,
+    openModal,
+    setOpenModal,
+    getCorrectAnswerCount,
+    totalQuestions,
   } = useQuizLogic();
 
+  const { handleNextPath } = useEducationSteps();
   if (!question) return <div className="text-white">Question not found</div>;
 
   return (
@@ -48,6 +55,36 @@ export default function QuizPage() {
         ) : (
           <Buttons onClick={handleNext}>Next</Buttons>
         )}
+        {getCorrectAnswerCount() <= 2 ? (
+          <QuizModal
+            imageSrc="/sadSmily.png"
+            title="Test was not passed"
+            description={`You answered ${getCorrectAnswerCount()}/${totalQuestions} correctly. The test was not passed. Please go back to the beginning of the lesson and try again.`}
+            onNext={() => handleNextPath("quiz/1")}
+            onSkip={() => console.log("Skipped")}
+            triggerText="Start Quiz"
+            showTrigger={false}
+            open={openModal}
+            onOpenChange={setOpenModal}
+            buttonName1="Try again"
+            buttonName2="skip"
+          />
+        ) : (
+          <QuizModal
+            imageSrc="/pass.png"
+            title="Test passed successfully!"
+            description="Great! you have successfully completed the lesson Introduction to Cryptocurrency. Go on to the next lesson and increase your knowledge."
+            onNext={() => handleNextPath("NewLesson")}
+            onSkip={() => console.log("Skipped")}
+            triggerText="Start Quiz"
+            showTrigger={false}
+            open={openModal}
+            onOpenChange={setOpenModal}
+            buttonName1="Next lesson"
+            buttonName2="Back"
+          />
+        )}
+
         <Buttons
           onClick={handleBack}
           className="bg-[#4E4E4F3B] hover:bg-[#287EE9]"

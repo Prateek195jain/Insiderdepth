@@ -20,8 +20,8 @@ export function useEducationSteps() {
     }
   };
 
-  const handleNext = () => {
-    router.push("/quiz/1");
+  const handleNextPath = (path: string) => {
+    router.push(`/${path}`);
   };
 
   return {
@@ -29,7 +29,7 @@ export function useEducationSteps() {
     currentContent: eduContentArray[currentStep],
     nextStep,
     prevStep,
-    handleNext,
+    handleNextPath,
     totalStep: eduContentArray.length,
     isFirstStep: currentStep === 0,
     isLastStep: currentStep === eduContentArray.length - 1,

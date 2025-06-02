@@ -5,4 +5,9 @@ export type QuizModalProps = {
   onNext?: () => void;
   onSkip?: () => void;
   triggerText?: string;
+  showTrigger: boolean;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
+  buttonName1: string;
+  buttonName2: string;
 };

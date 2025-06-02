@@ -12,7 +12,7 @@ export default function Education() {
     prevStep,
     isFirstStep,
     isLastStep,
-    handleNext,
+    handleNextPath,
   } = useEducationSteps();
 
   return (
@@ -34,9 +34,12 @@ export default function Education() {
             imageSrc="/knowledge.png"
             title="Test Your Knowledge!"
             description="There are 5 questions ahead of you. Don't worry about getting them right; you're not being assessed."
-            onNext={handleNext}
-            onSkip={() => console.log("Skipped")}
+            onNext={() => handleNextPath("quiz/1")}
+            onSkip={() => handleNextPath("NewLesson")}
             triggerText="Start Quiz"
+            showTrigger={true}
+            buttonName1="next"
+            buttonName2="skip"
           />
         )}
         <Buttons
