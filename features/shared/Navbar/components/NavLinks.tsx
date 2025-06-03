@@ -15,7 +15,7 @@ const NavLinks = ({ direction = "row" }: { direction?: "row" | "col" }) => {
       <NavigationMenuList
         className={`flex ${direction === "col" ? "flex-col gap-4" : "gap-6"}`}
       >
-        <NavigationMenuItem className="">
+        <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <Link
               href="/bitcoin-chart"
@@ -48,7 +48,7 @@ const NavLinks = ({ direction = "row" }: { direction?: "row" | "col" }) => {
 
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
-            <Link href="/Education" className={navigationMenuTriggerStyle()}>
+            <Link href="/education" className={navigationMenuTriggerStyle()}>
               Education
             </Link>
           </NavigationMenuLink>

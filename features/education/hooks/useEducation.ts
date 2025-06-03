@@ -1,9 +1,12 @@
+"use client";
+
 import { useState } from "react";
 import { eduContentArray } from "@/features/education/data";
-
+import { useRouter } from "next/navigation";
 
 export function useEducationSteps() {
   const [currentStep, setCurrentStep] = useState(0);
+  const router = useRouter();
 
   const nextStep = () => {
     if (currentStep < eduContentArray.length - 1) {
@@ -16,14 +19,19 @@ export function useEducationSteps() {
       setCurrentStep(currentStep - 1);
     }
   };
-  const totalStep = eduContentArray.length;
+
+  const handleNextPath = (path: string) => {
+    router.push(`/${path}`);
+  };
+
   return {
     currentStep,
     currentContent: eduContentArray[currentStep],
     nextStep,
     prevStep,
-    totalStep,
+    handleNextPath,
+    totalStep: eduContentArray.length,
     isFirstStep: currentStep === 0,
-    isLastStep: currentStep === eduContentArray.length - 1
+    isLastStep: currentStep === eduContentArray.length - 1,
   };
 }

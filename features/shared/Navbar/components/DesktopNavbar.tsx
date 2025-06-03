@@ -1,7 +1,7 @@
 import Image from "next/image";
-import NavLinks from "./components/NavLinks";
-import AuthButtons from "./components/AuthButtons";
-import SearchBar from "./components/Searchbar";
+import NavLinks from "./NavLinks";
+import AuthButtons from "./AuthButtons";
+import SearchBar from "./Searchbar";
 
 const DesktopNavbar = () => {
   return (

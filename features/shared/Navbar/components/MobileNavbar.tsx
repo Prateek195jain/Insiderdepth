@@ -7,9 +7,9 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import SearchBar from "./components/Searchbar";
-import NavLinks from "./components/NavLinks";
-import AuthButtons from "./components/AuthButtons";
+import NavLinks from "./NavLinks";
+import AuthButtons from "./AuthButtons";
+import SearchBar from "./Searchbar";
 
 const MobileNavbar = () => {
   return (
