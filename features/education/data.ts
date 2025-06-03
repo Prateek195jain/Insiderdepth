@@ -1,4 +1,4 @@
-import { EduContent } from "@/app/features/education/type";
+import { EduContent } from "@/features/education/type";
 
 
 export const eduContentArray: EduContent[] = [

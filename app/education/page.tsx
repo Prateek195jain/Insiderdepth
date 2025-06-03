@@ -1,9 +1,9 @@
 "use client";
 
-import { useEducationSteps } from "@/app/features/hooks/useEducation";
-import Buttons from "../features/education/components/button";
-import EducationTab from "@/app/features/education/educationtab";
-import QuizModal from "../features/education/components/QuizModal/quizmodal";
+import { useEducationSteps } from "@/features/education/components/hooks/useEducation";
+import Buttons from "../../features/education/components/button";
+import EducationTab from "@/features/education/educationtab";
+import QuizModal from "../../features/education/components/QuizModal/quizmodal";
 
 
 export default function Education() {

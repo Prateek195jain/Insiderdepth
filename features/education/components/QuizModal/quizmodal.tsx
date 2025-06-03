@@ -12,7 +12,7 @@ import {
   AlertDialogOverlay
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button"
-import {QuizModalProps} from "@/app/features/education/components/QuizModal/type"
+import {QuizModalProps} from "@/features/education/components/QuizModal/type"
 
 export default function QuizModal({
   imageSrc,

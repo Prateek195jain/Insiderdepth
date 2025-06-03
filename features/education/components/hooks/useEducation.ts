@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { eduContentArray } from "@/app/features/education/data";
+import { eduContentArray } from "@/features/education/data";
 
 
 export function useEducationSteps() {
