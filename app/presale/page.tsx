@@ -7,10 +7,10 @@ export default function PresalePage() {
 
   return (
     <div className="flex flex-col justify-center items-center text-white bg-black overflow-x-hidden">
-      <ArchitectureDiagram />
       <Tokenpurchase />
-      <Realtime />
+      <ArchitectureDiagram />
       <TokenomicsChart />
+      <Realtime />
     </div>
   )
 };

@@ -22,7 +22,7 @@ const tokenselect: TokenItem[] = [
   { id: 2, coin: "/purchaseform2.png", token: "POLYGON" },
   { id: 3, coin: "/purchaseform6.webp", token: "BITCOIN" },
   { id: 4, coin: "/TRX.png", token: "TRON" },
-  { id: 5, coin: "/Eth.png", token: "ETHEREUM" },
+  { id: 5, coin: "/ETH.png", token: "ETHEREUM" },
   { id: 6, coin: "/DOGE.png", token: "DOGECOIN" },
 ];
 
@@ -48,7 +48,7 @@ const TokenPurchaseForm = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-transparent px-4 py-8">
       <div className="bg-[#161B22EB] p-8 rounded-lg shadow-xl backdrop-blur-sm w-full max-w-md">
-        <h2 className="text-white text-2xl font-semibold mb-6 text-center">Token Purchase</h2>
+        <h2 className="text-white text-xl font-semibold mb-6 text-center">Token Purchase</h2>
 
         <TokenDropdown
           tokens={tokenselect}

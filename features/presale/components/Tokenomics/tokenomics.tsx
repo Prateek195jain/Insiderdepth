@@ -51,7 +51,7 @@ const TokenomicsChart: React.FC = () => {
       <div className="">
         <div className="flex flex-col items-center gap-6">
             <div className="bg-[#4FACF9] h-1 w-15"></div>
-            <h1 className="text-xl lg:text-4xl text-center font-medium">Tokenomics</h1>
+            <h1 className="text-xl lg:text-2xl text-center font-medium">Tokenomics</h1>
         </div>
 
         <div className="flex items-center justify-center m-8">

@@ -21,7 +21,7 @@ const AmountInput: React.FC<AmountInputProps> = ({ amount, onChange, onMaxClick 
           className="text-lg w-full bg-gray-700 text-white py-3 px-4 pr-16 border border-gray-600 rounded-md focus:outline-none focus:bg-gray-600 focus:border-blue-500 placeholder-gray-500"
         />
         <span
-          className="absolute text-lg inset-y-0 right-0 pr-4 flex items-center text-blue-400 font-medium cursor-pointer hover:text-blue-300"
+          className="absolute text-md inset-y-0 right-0 pr-4 flex items-center text-blue-400 font-medium cursor-pointer hover:text-blue-300"
           onClick={onMaxClick}
         >
           Max
