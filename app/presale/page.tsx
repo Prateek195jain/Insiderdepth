@@ -1,9 +1,9 @@
-const page = () => {
+import ArchitectureDiagram from "@/features/presale/components/ArchitectureDiagram";
+
+export default function PresalePage() {
   return (
-    <div className="h-screen flex justify-center items-center text-white text-4xl">
-      page
+    <div className="min-h-screen bg-black text-white">
+      <ArchitectureDiagram />
     </div>
   );
-};
-
-export default page;
+}
