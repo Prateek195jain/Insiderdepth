@@ -16,7 +16,7 @@ export default function Education() {
   } = useEducationSteps();
 
   return (
-    <div className="flex flex-col gap-5 lg:gap-10 p-10 lg:px-60 bg-[#010409] text-white pt-10 min-h-screen min-w-screen">
+    <div className="flex flex-col gap-5 lg:gap-10 p-10 lg:px-60 bg-[#010409] text-white pt-30 min-h-screen">
       <div className="flex flex-col items-center justify-center gap-10">
         <h1 className="md:text-4xl text-xl font-semibold">
           Introduction to Cryptocurrency
