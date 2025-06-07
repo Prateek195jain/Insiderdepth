@@ -3,7 +3,7 @@ import FooterLinks from "./FooterLinks";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col fixed bottom-0 right-0 left-0 max-w-full items-center lg:flex-row lg:flex lg:gap-64 bg-[#161B22] p-2 border border-[#30363D9C] lg:justify-between lg:items-center">
+    <div className="flex flex-col max-w-full items-center lg:flex-row lg:flex lg:gap-64 bg-[#161B22] p-2 border border-[#30363D9C] lg:justify-between lg:items-center">
       <span className="flex gap-2">
         <Image
           src="/puma-logo.png"

@@ -10,7 +10,7 @@ const footerItems = [
 const icons = [
   { src: "/instagram.png", alt: "Instagram" },
   { src: "/facebook.png", alt: "Facebook" },
-  { src: "/linkedIn.png", alt: "LinkedIn" },
+  { src: "/linkedin.png", alt: "LinkedIn" },
   { src: "/spotify.png", alt: "Spotify" },
   { src: "/twitter.png", alt: "Twitter" },
 ];
