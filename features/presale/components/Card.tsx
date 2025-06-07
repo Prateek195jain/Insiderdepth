@@ -6,6 +6,8 @@ import CardMidSection from "./CardComponents/CardMidSection";
 import CardChat from "./CardComponents/CardChat";
 import { CardData } from "./type";
 
+
+
 const Card = ({
   title,
   sections,
