@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useQuizStore } from "@/app/quiz/state/store";
-import { Questions } from "@/app/quiz/data/Quizdata";
+import { QuestionType } from "@/app/quiz/data/Quizdata";
+// import { Questions } from "@/app/quiz/data/Quizdata";
 
-export const useQuizLogic = () => {
+export const useQuizLogic = (Questions: QuestionType[]) => {
   const router = useRouter();
   const params = useParams();
 
@@ -79,7 +80,6 @@ export const useQuizLogic = () => {
     const hasPrev = Questions.some((q) => q.id === prevId);
     if (hasPrev) router.push(`/quiz/${prevId}`);
   };
-
 
   return {
     question,

@@ -1,10 +1,11 @@
 "use client";
 
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import QuizModal from "@/features/education/components/QuizModal/quizmodal";
 import { useEducationSteps } from "@/features/education/hooks/useEducation";
 import { QuestionCard } from "@/features/quiz/components/QuestionCard";
 import { useQuizLogic } from "@/features/quiz/hooks/useQuizLogic";
+import { Questions } from "../data/Quizdata";
 
 export default function QuizPage() {
   const {
@@ -20,7 +21,7 @@ export default function QuizPage() {
     setOpenModal,
     getCorrectAnswerCount,
     totalQuestions,
-  } = useQuizLogic();
+  } = useQuizLogic(Questions);
 
   const { handleNextPath } = useEducationSteps();
   if (!question) return <div className="text-white">Question not found</div>;
@@ -49,12 +50,14 @@ export default function QuizPage() {
         : "bg-[#287EE9] text-white hover:bg-[#4E4E4F3B]"
     }
   `}
-          variant={"insiderdepth"}
+            variant={"insiderdepth"}
           >
             Check Answer
           </Button>
         ) : (
-          <Button onClick={handleNext} variant={"insiderdepth"}>Next</Button>
+          <Button onClick={handleNext} variant={"insiderdepth"}>
+            Next
+          </Button>
         )}
         {getCorrectAnswerCount() <= 2 ? (
           <QuizModal
