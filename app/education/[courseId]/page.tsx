@@ -2,42 +2,45 @@
 import { useParams } from "next/navigation";
 import { courses, CourseSection, CourseTopic } from "../../data/courses";
 import { useState } from "react";
+import Link from "next/link";
 
 const CourseTopicItem = ({ topic }: { topic: CourseTopic; index: number }) => {
   return (
-    <div className="flex items-center justify-between py-3 px-4 border-b border-gray-700 last:border-b-0">
-      <div className="flex items-center">
-        <span className="text-gray-400 mr-3">
-          {/* Document/File Icon */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm3 5a1 1 0 011-1h4a1 1 0 011 1v1a1 1 0 01-1 1H8a1 1 0 01-1-1V9zm1 3a1 1 0 011-1h4a1 1 0 011 1v1a1 1 0 01-1 1H8a1 1 0 01-1-1v-1z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </span>
-        <span className="text-gray-200">{topic.title}</span>
-      </div>
-      <div className="flex items-center space-x-4">
-        {topic.isPreview && (
-          <span className="text-blue-400 text-sm cursor-pointer hover:underline">
-            Preview
+    <Link href="/education">
+      <div className="flex items-center justify-between py-3 px-4 border-b border-gray-700 last:border-b-0">
+        <div className="flex items-center">
+          <span className="text-gray-400 mr-3">
+            {/* Document/File Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm3 5a1 1 0 011-1h4a1 1 0 011 1v1a1 1 0 01-1 1H8a1 1 0 01-1-1V9zm1 3a1 1 0 011-1h4a1 1 0 011 1v1a1 1 0 01-1 1H8a1 1 0 01-1-1v-1z"
+                clipRule="evenodd"
+              />
+            </svg>
           </span>
-        )}
-        {topic.isDownload && (
-          <span className="text-green-400 text-sm cursor-pointer hover:underline">
-            Download
-          </span>
-        )}
-        <span className="text-gray-400 text-sm">{topic.duration}</span>
+          <span className="text-gray-200">{topic.title}</span>
+        </div>
+        <div className="flex items-center space-x-4">
+          {topic.isPreview && (
+            <span className="text-blue-400 text-sm cursor-pointer hover:underline">
+              Preview
+            </span>
+          )}
+          {topic.isDownload && (
+            <span className="text-green-400 text-sm cursor-pointer hover:underline">
+              Download
+            </span>
+          )}
+          <span className="text-gray-400 text-sm">{topic.duration}</span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
