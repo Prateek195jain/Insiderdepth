@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Notification from "./Notification";
+import Link from "next/link";
 
 const AuthButtons = ({ isColumn = false }: { isColumn?: boolean }) => (
   <div
@@ -14,7 +15,7 @@ const AuthButtons = ({ isColumn = false }: { isColumn?: boolean }) => (
         isColumn ? "w-full" : ""
       }`}
     >
-      Register
+      <Link href="/register">Register</Link>
     </Button>
     <Button
       className={`border text-white/70 hover:opacity-80 ${
