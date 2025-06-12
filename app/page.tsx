@@ -1,11 +1,5 @@
-
-import Education from './education/page';
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <Education />
-      
-    </div>
-  );
+  redirect("/presale");
 }
