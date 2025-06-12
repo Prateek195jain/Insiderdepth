@@ -7,7 +7,7 @@ export const GoogleRegisterButton = () => (
       className="w-full flex items-center justify-center gap-2 bg-[#232A36] hover:opacity-70 text-gray-300 py-2 rounded-md font-medium text-base mb-2"
       disabled
     >
-      <span className="px-2">
+      <span>
         <Image src="/google.png" alt="Google-logo" height={18} width={18} />
       </span>
       Register with Google
