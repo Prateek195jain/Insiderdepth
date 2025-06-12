@@ -15,14 +15,16 @@ const ChatBotIcon = () => {
           <ChatPanel />
         </div>
       )}
-
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-12 h-12 rounded-full border-2 border-[#0194FE] flex items-center justify-center cursor-pointer hover:opacity-70 transition"
-      >
-        {isOpen ? (
-          <X className="text-[#0194FE] w-6 h-6" />
-        ) : (
+      {isOpen ? (
+        <X
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-[#0194FE] cursor-pointer w-6 h-6 absolute top-0 translate-y-1/4 right-0 -translate-x-1/4"
+        />
+      ) : (
+        <div
+          onClick={() => setIsOpen(!isOpen)}
+          className="w-12 h-12 rounded-full border-2 border-[#0194FE] flex items-center justify-center cursor-pointer hover:opacity-70 transition"
+        >
           <Image
             src="/puma-logo.png"
             alt="chatbot-logo"
@@ -30,8 +32,8 @@ const ChatBotIcon = () => {
             height={24}
             className="object-contain"
           />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
