@@ -95,10 +95,10 @@ const LoginPage: React.FC = () => {
 
       <div className="bg-[#161B22] p-8 rounded shadow-2xl w-full max-w-md mx-auto mb-8">
         <button
-          className="w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-4 rounded flex items-center justify-center transition duration-300 mb-6 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-4 rounded flex items-center justify-center gap-2 mb-6 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
           onClick={() => console.log('Login with Google clicked!')}
         >
-          <img src="/Google.png" alt="" />
+          <img src="/Google.png" alt="" className="w-6"/>
           Login with Google
         </button>
 
@@ -155,9 +155,9 @@ const LoginPage: React.FC = () => {
         <p className="text-center text-gray-400 text-sm mt-6">
           You don't have an account ?{' '}
           <a
-            href="#"
+            href="/register"
             className="text-blue-500 hover:underline font-semibold"
-            onClick={() => alert('Register link clicked!')}
+            onClick={() => console.log('Register link clicked!')}
           >
             Register
           </a>
