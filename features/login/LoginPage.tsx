@@ -98,7 +98,7 @@ const LoginPage: React.FC = () => {
           className="w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-4 rounded flex items-center justify-center gap-2 mb-6 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
           onClick={() => console.log('Login with Google clicked!')}
         >
-          <img src="/Google.png" alt="" className="w-6"/>
+          <img src="/google.png" alt="" className="w-6"/>
           Login with Google
         </button>
 
