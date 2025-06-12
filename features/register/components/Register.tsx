@@ -21,7 +21,7 @@ export default function Register() {
   });
 
   return (
-    <div className=" w-full max-w-md mx-auto bg-[#181E25] rounded-xl shadow-lg p-8 flex flex-col gap-6 mt-8">
+    <div className=" w-full max-w-md mx-auto bg-[#181E25] rounded-xl shadow-lg p-6 flex flex-col gap-6 mt-4">
       <h2 className="text-2xl font-semibold text-white text-center">
         Register
       </h2>
@@ -33,7 +33,7 @@ export default function Register() {
           e.preventDefault();
           form.handleSubmit();
         }}
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-2"
       >
         <form.Field
           name="username"
@@ -62,7 +62,7 @@ export default function Register() {
                   onChange={(e) => field.handleChange(e.target.value)}
                   onBlur={field.handleBlur}
                   placeholder="Enter your username"
-                  className="w-full bg-[#232A36] text-white py-3 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
+                  className="w-full bg-[#232A36] text-white py-2 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
                 />
               </div>
               {field.state.meta.errors?.[0] && (
@@ -101,7 +101,7 @@ export default function Register() {
                   onChange={(e) => field.handleChange(e.target.value)}
                   onBlur={field.handleBlur}
                   placeholder="Enter your email"
-                  className="w-full bg-[#232A36] text-white py-3 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
+                  className="w-full bg-[#232A36] text-white py-2 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
                 />
               </div>
               {field.state.meta.errors?.[0] && (
@@ -141,7 +141,7 @@ export default function Register() {
                   onChange={(e) => field.handleChange(e.target.value)}
                   onBlur={field.handleBlur}
                   placeholder="Enter your password"
-                  className="w-full bg-[#232A36] text-white py-3 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
+                  className="w-full bg-[#232A36] text-white py-2 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
                 />
               </div>
               {field.state.meta.errors?.[0] && (
@@ -180,7 +180,7 @@ export default function Register() {
                   onChange={(e) => field.handleChange(e.target.value)}
                   onBlur={field.handleBlur}
                   placeholder="Confirm your password"
-                  className="w-full bg-[#232A36] text-white py-3 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
+                  className="w-full bg-[#232A36] text-white py-2 pl-10 pr-3 rounded-md outline-none focus:ring-2 focus:ring-[#287EE9]"
                 />
               </div>
               {field.state.meta.errors?.[0] && (
@@ -198,7 +198,7 @@ export default function Register() {
           {([canSubmit, isSubmitting]) => (
             <button
               type="submit"
-              className="bg-[#287EE9] hover:bg-[#1B4D8C] text-white font-semibold py-3 rounded-md mt-2 transition"
+              className="bg-[#287EE9] hover:bg-[#1B4D8C] text-white font-semibold py-2 rounded-md mt-3 transition"
               disabled={!canSubmit}
             >
               {isSubmitting ? "Submitting..." : "Register"}
