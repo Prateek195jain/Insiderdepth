@@ -4,7 +4,7 @@ import React from "react";
 export const GoogleRegisterButton = () => (
   <div>
     <button
-      className="w-full flex items-center justify-center gap-2 bg-[#232A36] text-gray-300 py-3 rounded-md font-medium text-base mb-2"
+      className="w-full flex items-center justify-center gap-2 bg-[#232A36] hover:opacity-70 text-gray-300 py-2 rounded-md font-medium text-base mb-2"
       disabled
     >
       <span className="px-2">
