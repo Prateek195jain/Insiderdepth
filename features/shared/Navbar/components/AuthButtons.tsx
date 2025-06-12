@@ -22,7 +22,7 @@ const AuthButtons = ({ isColumn = false }: { isColumn?: boolean }) => (
         isColumn ? "w-full" : ""
       }`}
     >
-      Log In
+      <Link href="/login">Log In</Link>
     </Button>
   </div>
 );
