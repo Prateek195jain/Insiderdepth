@@ -28,14 +28,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0F1117] text-white`}
       >
-        <div className="">
+        <div className="min-h-screen flex flex-col">
           <Navbar />
+          <main className="flex-1 flex items-center justify-center">
+            {children}
+          </main>
+          <ChatBotIcon />
+          <Footer />
         </div>
-        {children}
-        <ChatBotIcon />
-        <Footer />
       </body>
     </html>
   );
