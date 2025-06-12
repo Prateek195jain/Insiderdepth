@@ -11,12 +11,14 @@ import Link from "next/link";
 import { NavLinkItem } from "./type";
 
 const navItems: NavLinkItem[] = [
-  { label: "Bitcoin chart", href: "/bitcoin-chart" },
-  { label: "Ethereum chart", href: "/ethereum-chart" },
-  { label: "My list", dropdown: [{ label: "My Link", href: "#" }] },
+  // { label: "Bitcoin chart", href: "/bitcoin-chart" },
+  // { label: "Ethereum chart", href: "/ethereum-chart" },
+  // { label: "My list", dropdown: [{ label: "My Link", href: "#" }] },
+  { label: "Platform", href: "/platform" },
   { label: "Education", href: "/educationPage" },
-  { label: "Resources", dropdown: [{ label: "Resource Link", href: "#" }] },
-  { label: "🔥Presale", href: "/presale" },
+  { label: "Journal", href: "/journal" },
+  // { label: "Resources", dropdown: [{ label: "Resource Link", href: "#" }] },
+  // { label: "🔥Presale", href: "/presale" },
 ];
 
 const NavLinks = ({ direction = "row" }: { direction?: "row" | "col" }) => {

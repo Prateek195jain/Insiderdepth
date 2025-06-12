@@ -1,5 +1,5 @@
-import { redirect } from "next/navigation";
+import PresalePage from "./presale/page";
 
 export default function Home() {
-  redirect("/presale");
+  <PresalePage />;
 }
