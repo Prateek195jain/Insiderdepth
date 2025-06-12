@@ -31,20 +31,7 @@ export default function ChangePasswordForm() {
     }
 
     try {
-      // Integrate your actual API call here to change the password.
-      // Example:
-      // const response = await fetch('/api/change-password', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ oldPassword, newPassword }),
-      // });
-      //
-      // if (!response.ok) {
-      //   const data = await response.json();
-      //   throw new Error(data.message || 'Failed to change password.');
-      // }
-      //
-      // If the API call is successful:
+      // idhr acutal api ko integrate kr dena bhaiya.
       setSuccess('Password changed successfully!');
       setOldPassword('');
       setNewPassword('');
@@ -58,7 +45,7 @@ export default function ChangePasswordForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <label htmlFor="oldPassword" className="block text-sm font-medium text-gray-300 sr-only">
+        <label htmlFor="oldPassword" className="block text-sm text-gray-300">
           Enter old password
         </label>
         <div className="relative mt-1 rounded-md shadow-sm">
@@ -69,17 +56,16 @@ export default function ChangePasswordForm() {
             type="password"
             id="oldPassword"
             name="oldPassword"
-            placeholder="Enter old password"
             value={oldPassword}
             onChange={(e) => setOldPassword(e.target.value)}
-            className="block w-full rounded-md border-0 py-2 pl-10 pr-3 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
+            className="block w-full rounded-md border-0 py-2 pl-10 pr-3 text-gray-900  focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
             required
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="newPassword" className="block text-sm font-medium text-gray-300 sr-only">
+        <label htmlFor="newPassword" className="block text-sm text-gray-300">
           Enter new password
         </label>
         <div className="relative mt-1 rounded-md shadow-sm">
@@ -90,17 +76,16 @@ export default function ChangePasswordForm() {
             type="password"
             id="newPassword"
             name="newPassword"
-            placeholder="Enter new password"
             value={newPassword}
             onChange={(e) => setNewPassword(e.target.value)}
-            className="block w-full rounded-md border-0 py-2 pl-10 pr-3 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
+            className="block w-full rounded-md border-0 py-2 pl-10 pr-3 text-gray-900  focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
             required
           />
         </div>
       </div>
 
       <div>
-        <label htmlFor="confirmNewPassword" className="block text-sm font-medium text-gray-300 sr-only">
+        <label htmlFor="confirmNewPassword" className="block text-sm text-gray-300">
           Enter new password again
         </label>
         <div className="relative mt-1 rounded-md shadow-sm">
@@ -111,10 +96,9 @@ export default function ChangePasswordForm() {
             type="password"
             id="confirmNewPassword"
             name="confirmNewPassword"
-            placeholder="Enter new password again"
             value={confirmNewPassword}
             onChange={(e) => setConfirmNewPassword(e.target.value)}
-            className="block w-full rounded-md border-0 py-2 pl-10 pr-3 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
+            className="block w-full rounded-md border-0 py-2 pl-10 pr-3 text-gray-900  focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 bg-gray-700 text-white"
             required
           />
         </div>
