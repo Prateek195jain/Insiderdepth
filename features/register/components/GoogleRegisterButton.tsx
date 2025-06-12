@@ -8,7 +8,7 @@ export const GoogleRegisterButton = () => (
       disabled
     >
       <span className="px-2">
-        <Image src="/Google.png" alt="Google-logo" height={18} width={18} />
+        <Image src="/google.png" alt="Google-logo" height={18} width={18} />
       </span>
       Register with Google
     </button>
