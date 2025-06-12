@@ -5,7 +5,6 @@ import TokenomicsChart from "@/features/presale/components/Tokenomics/tokenomics
 import AnalysisPlatform from "@/features/presale/components/AnalysisPlatform/AnalysisPlatform";
 import ExchangeAnalysis from "@/features/presale/components/ExchangeAnalysis/ExchangeAnalysis";
 import Roadmap from "@/features/presale/components/Roadmap/Roadmap";
-import ChatPanel from "@/features/chat/components/chatPanel";
 
 export default function PresalePage() {
   return (
@@ -17,7 +16,6 @@ export default function PresalePage() {
       <TokenomicsChart />
       <Roadmap />
       <Realtime />
-      <ChatPanel />
     </div>
   );
 }

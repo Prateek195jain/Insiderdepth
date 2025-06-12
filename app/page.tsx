@@ -1,11 +1,5 @@
-
-import Education from './education/page';
+import PresalePage from "./presale/page";
 
 export default function Home() {
-  return (
-    <div>
-      <Education />
-      
-    </div>
-  );
+  <PresalePage />;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEducationSteps } from "@/features/education/hooks/useEducation";
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import EducationTab from "@/features/education/educationtab";
 import QuizModal from "../../features/education/components/QuizModal/quizmodal";
 
@@ -26,7 +26,11 @@ export default function Education() {
 
       <div className="flex gap-5 lg:gap-10">
         {!isLastStep ? (
-          <Button onClick={nextStep} disabled={isLastStep} variant={"insiderdepth"}>
+          <Button
+            onClick={nextStep}
+            disabled={isLastStep}
+            variant={"insiderdepth"}
+          >
             Next
           </Button>
         ) : (
@@ -35,7 +39,7 @@ export default function Education() {
             title="Test Your Knowledge!"
             description="There are 5 questions ahead of you. Don't worry about getting them right; you're not being assessed."
             onNext={() => handleNextPath("quiz/1")}
-            onSkip={() => handleNextPath("NewLesson")}
+            onSkip={() => handleNextPath("education")}
             triggerText="Start Quiz"
             showTrigger={true}
             buttonName1="next"
